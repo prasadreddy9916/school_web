@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<h2>About School</h2>
+
+        <p class="text">
+We focus on education, discipline and growth of students.
+</p>
+
+<img src="{{ url_for('static', filename='images/sc2.png') }}" class="img">
+
+<p class="text">
+    
+Modern classrooms and experienced teachers help students succeed.
+</p>
+
+<img src="{{ url_for('static', filename='images/sc3.png') }}" class="img">
+
+{% endblock %}

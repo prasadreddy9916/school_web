@@ -1,0 +1,10 @@
+.text {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.img {
+    width: 300px;
+    display: block;
+    margin: 10px auto;
+}

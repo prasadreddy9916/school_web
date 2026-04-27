@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<h2>Login</h2>
+<hr>
+{% if error%}
+    <p style="color:red">{{ error }}</p>
+
+{% endif %}
+
+<form method= "POST">
+ <input type="email" name="email" placeholder="Email"><br><br>
+    <input type="password" name="password" placeholder="Password"><br><br>
+    <button type="submit">Login</button>
+</form>
+
+{% endblock %}

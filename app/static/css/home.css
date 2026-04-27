@@ -1,0 +1,19 @@
+.banner {
+    background: url("../images/sc4.png");
+   
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:greenyellow;
+    padding-top: 100px;
+    
+    height: 100vh;
+}
+.banner{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: chocolate;
+}

@@ -1,0 +1,62 @@
+body {
+    font-family: Arial;
+   
+    
+}
+header {
+    background: darkblue;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50px;
+}
+
+
+header h1 {
+    margin: 0;
+    position: absolute;
+    left: 20px;
+}
+
+nav {
+    margin:  auto;
+}
+
+nav a {
+    color: yellow;
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+
+/* footer */
+
+footer {
+    background: black;
+    color: lightgray;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+            padding: 20px;
+}
+
+.footer-section {
+    max-width: 200px;
+}
+
+
+.copyright {
+      text-align: center;
+    background-color:burlywood;
+    padding: 10px;
+    color: white;
+}

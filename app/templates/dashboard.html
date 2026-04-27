@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard"> 
+
+
+
+        <p>Welcome! You are logged in.</p>
+
+   
+
+
+    <h3>Admissions List</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Board</th>
+            <th>Location</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for a in admissions %}
+        <tr>
+            <td>{{ a.id }}</td>
+            <td>{{ a.student_name }}</td>
+            <td>{{ a.email }}</td>
+            <td>{{ a.phone }}</td>
+            <td>{{ a.board }}</td>
+            <td>{{ a.location }}</td>
+            <td>{{ a.message }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</section>
+
+{% endblock %}

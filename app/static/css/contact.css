@@ -1,0 +1,27 @@
+form {
+    width: 350px;
+    margin: auto;
+}
+
+h2{
+
+    text-align: center;
+    color: hotpink;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px;
+   background-color: grey;
+    color: white;
+    border: none;
+}
