@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/students.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="layout">
+
+   
+
+    <div class="main">
+
+        <div class="top-bar">
+            <input type="text" id="search" placeholder="Search by Name / Class / ID">
+            <button onclick="openModal()">Add Student</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Class</th>
+                    <th>Batch</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Parent</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+        </table>
+
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h3>Add / Update Student</h3>
+
+        <input id="name" placeholder="Name">
+        <input id="age" placeholder="Age">
+        <input id="gender" placeholder="Gender">
+        <input id="class_name" placeholder="Class">
+        <input id="batch" placeholder="Batch">
+        <input id="email" placeholder="Email">
+        <input id="phone" placeholder="Phone">
+        <input id="address" placeholder="Address">
+        <input id="parent" placeholder="Parent Name">
+
+        <button onclick="saveStudent()">Save</button>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/students.js') }}"></script>
+
+{% endblock %}

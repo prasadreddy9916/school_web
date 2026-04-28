@@ -1,7 +1,8 @@
 from . import auth_bp
 from flask import request, render_template, redirect, url_for
-from flask_login import login_user, logout_user, login_required
+from flask_login import login_user, logout_user, login_required 
 from .services import register_user_service, login_user_service, get_all_admissions_service
+
 
 
 # register
@@ -9,7 +10,7 @@ from .services import register_user_service, login_user_service, get_all_admissi
 @auth_bp.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        data = request.form
+        data = request.form 
 
       
         if not data.get("name") or not data.get("email") or not data.get("password"):
@@ -47,11 +48,11 @@ def login():
     return render_template("login.html"), 200
 
 
+
 # Dashboard
 
-
 @auth_bp.route("/dashboard")
-@login_required
+@login_required  
 def dashboard():
     admissions = get_all_admissions_service()
     return render_template("dashboard.html", admissions=admissions), 200

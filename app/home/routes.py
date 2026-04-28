@@ -23,6 +23,7 @@ def admission_page():
     return render_template("admission.html"), 200
 
 
+
 # API
 @home_bp.route("/api/admission", methods=["POST"])
 def admission_submit():
@@ -44,4 +45,7 @@ def admission_submit():
 
     except Exception:
         return jsonify({"error": "Something went wrong"}), 500
+
+
+
 

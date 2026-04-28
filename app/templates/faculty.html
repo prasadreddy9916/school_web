@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/faculty.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="layout">
+
+  
+    <!-- MAIN -->
+    <div class="main">
+
+        <div class="top-bar">
+            <input type="text" placeholder="Search by name / subject / location">
+            <button onclick="openModal()">Add Faculty</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Location</th>
+                    <th>Subject</th>
+                    <th>Class Timings</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="facultyTable"></tbody>
+        </table>
+
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+
+        <h3>Add / Update Faculty</h3>
+
+        <input id="name" placeholder="Name">
+        <input id="phone" placeholder="Phone">
+        <input id="location" placeholder="Location">
+        <input id="subject" placeholder="Subject">
+
+        <h4>Class Timings</h4>
+
+        <input id="class1" placeholder="Class 1 - 9:30 AM">
+        <input id="class2" placeholder="Class 2 - 10:30 AM">
+        <input id="class3" placeholder="Class 3 - 11:30 AM">
+        <input id="class4" placeholder="Class 4 - 1:00 PM">
+        <input id="class5" placeholder="Class 5 - 2:00 PM">
+        <input id="class6" placeholder="Class 6 - 3:00 PM">
+
+        <div class="btns">
+            <button onclick="saveFaculty()">Save</button>
+            <button onclick="closeModal()">Close</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/faculty.js') }}"></script>
+
+{% endblock %}

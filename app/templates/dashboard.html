@@ -6,45 +6,21 @@
 
 {% block content %}
 
-<section class="dashboard"> 
-
-
-
-        <p>Welcome! You are logged in.</p>
+<div class="layout">
 
    
 
+    <!-- MAIN -->
+    <div class="main">
 
-    <h3>Admissions List</h2>
+        <h2>Welcome to Prasad School</h2>
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Board</th>
-            <th>Location</th>
-            <th>Message</th>
-        </tr>
-    </thead>
+        <p>We provide quality education for students from class 1 to 10.</p>
+        <p>Our school focuses on discipline, knowledge, and overall development.</p>
+        <p>We have experienced faculty and structured class schedules.</p>
 
-    <tbody>
-        {% for a in admissions %}
-        <tr>
-            <td>{{ a.id }}</td>
-            <td>{{ a.student_name }}</td>
-            <td>{{ a.email }}</td>
-            <td>{{ a.phone }}</td>
-            <td>{{ a.board }}</td>
-            <td>{{ a.location }}</td>
-            <td>{{ a.message }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+    </div>
 
-</section>
+</div>
 
 {% endblock %}

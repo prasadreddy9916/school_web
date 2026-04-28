@@ -5,6 +5,8 @@ from . extenstions import db,login_manager
 from .home.routes import home_bp
 from .auth.routes import auth_bp
 from .auth.models import User
+from .admin import admin_bp
+
 
 
 def  create_app():
@@ -21,6 +23,9 @@ def  create_app():
     
     app.register_blueprint(home_bp)
     app.register_blueprint(auth_bp,url_prefix="/auth")
+    
+
+    app.register_blueprint(admin_bp, url_prefix="/admin")
     
     
     
